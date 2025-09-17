@@ -1,11 +1,15 @@
   <form>
-    <label for="angular1">Angular</label>
-    <input type="checkbox" [(ngModel)]="ang" name="angular1">
-    <label for="js1">JavaScript</label>
-    <input type="checkbox" [(ngModel)]="js" name="js1">
+    <label for="angular1">Angular </label>
+    <input type="checkbox" [(ngModel)]="ang" name="angular1"><br><br>
+    <label for="js1">JavaScript </label>
+    <input type="checkbox" [(ngModel)]="js" name="js1"><br><br>
+    <label for="num1">Ilość rat </label>
+    <input type="number" [(ngModel)]="ilosc_rat" name="num1">
   </form>
 
     <p>Angular: {{ ang ? 'True' : 'False' }}</p>
     <p>JavaScript: {{ js ? 'True' : 'False' }}</p>
 
     <p>Suma: {{ suma() }}</p>
+    <p>Ilość rat: {{ ilosc_rat }}</p>
+    <p>Kwota pojedyńczej raty: {{ cena_raty() }}</p>

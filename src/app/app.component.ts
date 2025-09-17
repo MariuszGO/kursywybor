@@ -16,11 +16,24 @@ export class AppComponent {
   sum:number=0;
   angular:number = 5000;
   javascript:number = 3000;
-  
+  ilosc_rat:number=0;
+ 
+  cena_raty():number{
+    if(this.ilosc_rat>0){
+
+    return this.suma()/this.ilosc_rat;
+
+    }
+
+    return 0;
+  }
+
+
+
 suma(): number 
 {
-
   this.sum = 0;
+ 
 
     if (this.ang == true && this.js == true) 
       {
