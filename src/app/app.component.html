@@ -6,7 +6,13 @@
     <label for="num1">Ilość rat </label>
     <input type="number" [(ngModel)]="ilosc_rat" name="num1"><br><br>
     <label for="num2">Miasto </label>
-    <input type="text"[(ngModel)]="miasto" name="num2">
+  <!--  <input type="text"[(ngModel)]="miasto" name="num2">-->
+    <select [(ngModel)]="miasto" name="num2">
+      <option value="Warszawa">Warszawa</option>
+      <option value="Gdańsk">Gdańsk</option>  
+    <option value="Kraków">Kraków</option>
+    </select>
+
   </form>
 
     <p>Angular: {{ ang ? 'True' : 'False' }}</p>
