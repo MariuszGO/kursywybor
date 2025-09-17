@@ -4,7 +4,9 @@
     <label for="js1">JavaScript </label>
     <input type="checkbox" [(ngModel)]="js" name="js1"><br><br>
     <label for="num1">Ilość rat </label>
-    <input type="number" [(ngModel)]="ilosc_rat" name="num1">
+    <input type="number" [(ngModel)]="ilosc_rat" name="num1"><br><br>
+    <label for="num2">Miasto </label>
+    <input type="text"[(ngModel)]="miasto" name="num2">
   </form>
 
     <p>Angular: {{ ang ? 'True' : 'False' }}</p>
@@ -12,4 +14,5 @@
 
     <p>Suma: {{ suma() }}</p>
     <p>Ilość rat: {{ ilosc_rat }}</p>
-    <p>Kwota pojedyńczej raty: {{ cena_raty() }}</p>
+    <p>Kwota pojedyńczej raty: {{ cena_raty().toFixed(2) }}</p>
+    <p>Miasto: {{ miasto }}</p>
