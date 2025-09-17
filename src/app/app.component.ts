@@ -1,12 +1,48 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';    
+import { CommonModule } from '@angular/common';  
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
 })
+
 export class AppComponent {
-  title = 'app1';
+
+  ang = false;
+  js = false;
+  sum:number=0;
+  angular:number = 5000;
+  javascript:number = 3000;
+  
+suma(): number 
+{
+
+  this.sum = 0;
+
+    if (this.ang == true && this.js == true) 
+      {
+      this.sum=this.angular+this.javascript;
+      return this.sum;
+      } 
+      else if (this.ang == true) 
+          {
+           this.sum=this.angular;
+           return this.sum;
+          } 
+          else if (this.js == true) 
+            {
+             this.sum=this.javascript;
+             return this.sum;
+            }
+            else
+            {
+              this.sum=0;
+              return this.sum;
+            }
+
+}
+
 }
